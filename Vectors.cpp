@@ -38,5 +38,7 @@ int main(){
 	print_vector_reference(items);
 	print_vector_reference(items);
 	print_vector_reference(items);
+	vector<int> newItems = items; //This will copy the content of items to newItems.
+	                              //We can use this with vectors and STL Arrays but not with normal arrays
 	return 0;
 }
