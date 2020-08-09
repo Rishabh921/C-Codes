@@ -1,0 +1,13 @@
+You enter the
+
+if (!(cin >> input_var))
+statement if an error occurs when taking the input from cin. If an error occurs then an error flag is set and future attempts to get input will fail. That's why you need
+
+cin.clear();
+to get rid of the error flag. Also, the input which failed will be sitting in what I assume is some sort of buffer. When you try to get input again, it will read the same input in the buffer and it will fail again. That's why you need
+
+cin.ignore(10000,'\n');
+It takes out 10000 characters from the buffer but stops if it encounters a newline (\n). The 10000 is just a generic large value.
+
+For more genralised use of cin.ignore() we include #include<limits> and use:
+cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
