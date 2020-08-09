@@ -1,6 +1,15 @@
 //This works same as multidimensional arrays
 
 
+//each row of 2D vector can contain different number of columns.
+
+/* 
+vector<vector<int> > vect{ { 1, 2 }, 
+                               { 4, 5, 6 }, 
+                               { 7, 8, 9, 10 } };
+ */
+
+
 #include<iostream>
 #include<vector>
 using namespace std;
