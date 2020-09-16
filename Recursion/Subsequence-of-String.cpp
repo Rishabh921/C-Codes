@@ -1,7 +1,7 @@
 #include <bits/stdc++.h> 
 using namespace std;
 
-void subsequence(string ip,string op)
+void subsequence(string ip,string op)   // for unique subsequences store the output in a set.
 {
     if(ip.length() == 0)
     {
