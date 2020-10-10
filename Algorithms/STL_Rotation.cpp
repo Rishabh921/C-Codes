@@ -1,6 +1,9 @@
 //Rotating array or vector using STL
 // using std::rotate algorithm 
 
+//Left Rotation : To rotate left, we need to add the vector index. For example, you have to rotate vector left 3 times. The 3th index of vector becomes first element. vec.begin() + 3 will rotate vector 3 times left.
+//Right Rotation : To rotate right, we need to subtract the vector index. For example, you have to rotate vector right 3 times. The 3th last index of vector becomes first element. vec.begin()+vec.size()-3 will rotate vector 3 times right.
+
 #include<bits/stdc++.h> 
 
 int main () { 
