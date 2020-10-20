@@ -34,6 +34,7 @@ int main(){
 	items.push_back(12); //to push elements in a vector
 	items.push_back(56); 
 	items.push_back(33);
+	items.insert(items.begin()+2,49); //insert element at any positon
 	
 	cout<<"Vector Size = "<<items.size()<<endl; //to get the size of vector
 	
