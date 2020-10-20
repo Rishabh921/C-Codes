@@ -34,8 +34,13 @@ int main(){
 	items.push_back(12); //to push elements in a vector
 	items.push_back(56); 
 	items.push_back(33);
+	
 	cout<<"Vector Size = "<<items.size()<<endl; //to get the size of vector
+	
 	items.pop_back();  //to pop out last element of vector
+	items.erase(items.begin() + 2); //to delete kth element from vector
+	items.erase(items.end() - 1); //to delete last element
+	
 	cout<<"Front element= "<<items.front()<<endl; //to get first element of vector
 	cout<<"Last element= "<<items.back()<<endl; //to get last element of vector
 	print_vector(items);
