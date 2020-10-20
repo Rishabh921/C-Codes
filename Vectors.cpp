@@ -2,7 +2,9 @@
 #include<vector>
 using namespace std;
 
-//Call By Value
+//Call By Value 
+//takes O(n) time so try to avoid it
+
 void print_vector(vector<int> myVector)  
 {
 	for(int i=0;i<myVector.size();i++)
@@ -12,6 +14,7 @@ void print_vector(vector<int> myVector)
 }
 
 //Call By Reference
+//More Efficient
 void print_vector_reference(vector<int> &myVector)
 {
 	myVector.push_back(100);
@@ -35,6 +38,12 @@ int main(){
 	items.push_back(56); 
 	items.push_back(33);
 	items.insert(items.begin()+2,49); //insert element at any positon
+	items.insert(items.begin()+1,{1,2,3}); //to insert multiple elements at any position
+	items.insert(items.begin(),3,0); //this will insert 0 three times at a given position
+	items.emplace_back(20); //same as push_back() for inbuilt data types but faster for user-defines 
+	                        //like class and structure
+	items.emplace(items.begin()+2,36); //to insert element at given position
+	
 	
 	cout<<"Vector Size = "<<items.size()<<endl; //to get the size of vector
 	
